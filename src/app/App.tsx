@@ -141,12 +141,6 @@ export default function App() {
                 >
                   Collaborate
                 </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#1a2740] text-[#1a2740] hover:bg-[#1a2740] hover:text-white px-6 py-6"
-                >
-                  Download CV
-                </Button>
               </motion.div>
             </motion.div>
           </div>
