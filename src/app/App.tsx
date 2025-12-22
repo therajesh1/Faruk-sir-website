@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import Navigation from './components/Navigation';
+import ResearchPapers from './components/ResearchPapers';
 import { Award, BookOpen, Briefcase, Building2, FileText, GraduationCap, Mail, MapPin, Phone, Shield, TrendingUp, Users } from 'lucide-react';
 import { Button } from './components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
@@ -495,6 +496,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Published Research Papers */}
+      <ResearchPapers />
 
       {/* Industry & Government Collaboration */}
       <section id="industry" className="py-20 bg-white">
