@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import Navigation from './components/Navigation';
 import ResearchPapers from './components/ResearchPapers';
+import Team915Intro from './components/Team915Intro';
 import { Award, BookOpen, Briefcase, Building2, FileText, GraduationCap, Mail, MapPin, Phone, Shield, TrendingUp, Users } from 'lucide-react';
 import { Button } from './components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card';
@@ -43,8 +44,17 @@ export default function App() {
     <div className="min-h-screen bg-white font-['Inter']">
       <Navigation />
 
+      <Team915Intro />
+
+      <div className="bg-white py-8 text-center">
+        <h2 className="font-['Playfair_Display'] text-[#1a2740] text-3xl md:text-4xl font-bold">
+          Mentor of Team 915
+        </h2>
+        <div className="w-16 h-1 bg-[#0d9488] mx-auto mt-4"></div>
+      </div>
+
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="home" className="pb-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Portrait */}
