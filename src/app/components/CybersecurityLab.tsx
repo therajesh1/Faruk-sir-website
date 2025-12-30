@@ -90,7 +90,7 @@ export default function CybersecurityLab() {
                             }}
                             className="w-full text-left block px-3 py-2 rounded-md text-base font-bold bg-cyan-900/50 text-cyan-300 border border-cyan-500/30"
                         >
-                            Dr. Faruk Kazi Portfolio
+                            Dr. Faruk Kazi
                         </button>
                     </motion.div>
                 )}

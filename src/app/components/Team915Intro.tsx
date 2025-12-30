@@ -53,17 +53,6 @@ export default function Team915Intro() {
                         Team 915 is the Cybersecurity Laboratory group operating under VJTI’s Centre of Excellence in Complex & Nonlinear Dynamical Systems (CoE-CNDS).
                     </motion.p>
 
-                    <motion.div variants={fadeInUp}>
-                        <Button
-                            className="bg-[#0d9488] hover:bg-[#0f766e] text-white px-8 py-6 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                            asChild
-                        >
-                            <a href="https://vaibhavidhas.github.io/cybersecurity_lab" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                                Visit Official Website
-                                <ExternalLink size={20} />
-                            </a>
-                        </Button>
-                    </motion.div>
                 </motion.div>
 
                 <motion.div
