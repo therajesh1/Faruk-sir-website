@@ -2,22 +2,12 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import Navigation from './Navigation';
 import ResearchPapers from './ResearchPapers';
-import Team915Intro from './Team915Intro';
-import { Award, BookOpen, Briefcase, Building2, FileText, GraduationCap, Mail, MapPin, Phone, Shield, TrendingUp, Users } from 'lucide-react';
+import { Award, BookOpen, Briefcase, Building2, FileText, GraduationCap, Mail, MapPin, Shield, TrendingUp, Users } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { Label } from './ui/label';
 import drFarukKaziImage from '../../assets/287b324ae8353c3ef50b0fdcdd672d78fcd94baf.png';
 
 export default function FarukPortfolio() {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        alert('Thank you for your message. This is a demo form.');
-    };
 
     // Animation variants
     const fadeInUp = {
@@ -44,9 +34,8 @@ export default function FarukPortfolio() {
         <div className="min-h-screen bg-white font-['Inter']">
             <Navigation />
 
-            <Team915Intro />
 
-            <div className="bg-white py-8 text-center">
+            <div className="bg-white pt-28 pb-8 text-center">
                 <h2 className="font-['Playfair_Display'] text-[#1a2740] text-3xl md:text-4xl font-bold">
                     Mentor of Team 915
                 </h2>
@@ -630,101 +619,41 @@ export default function FarukPortfolio() {
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Contact Information */}
-                        <div className="space-y-6">
-                            <Card className="border-[#1a2740]/10">
-                                <CardHeader>
-                                    <CardTitle className="text-[#1a2740]">Get in Touch</CardTitle>
-                                </CardHeader>
-                                <CardContent className="space-y-4">
-                                    <div className="flex items-start gap-3">
-                                        <Mail className="text-[#0d9488] mt-1" size={20} />
-                                        <div>
-                                            <p className="text-[#2c3e50]">faruk.kazi@university.edu</p>
-                                            <p className="text-sm text-[#717182]">Official Email</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start gap-3">
-                                        <Phone className="text-[#0d9488] mt-1" size={20} />
-                                        <div>
-                                            <p className="text-[#2c3e50]">+91 22 XXXX XXXX</p>
-                                            <p className="text-sm text-[#717182]">Office</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start gap-3">
-                                        <MapPin className="text-[#0d9488] mt-1" size={20} />
-                                        <div>
-                                            <p className="text-[#2c3e50]">University of Mumbai</p>
-                                            <p className="text-[#2c3e50]">Vidyanagari Campus</p>
-                                            <p className="text-[#2c3e50]">Mumbai, Maharashtra 400098</p>
-                                            <p className="text-[#2c3e50]">India</p>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="bg-gradient-to-br from-[#1a2740] to-[#2c3e50] text-white border-0">
-                                <CardContent className="pt-6">
-                                    <p className="text-sm mb-4">Available for:</p>
-                                    <ul className="space-y-2 text-sm">
-                                        <li>• International research collaborations</li>
-                                        <li>• Policy advisory consultations</li>
-                                        <li>• Government & industry partnerships</li>
-                                        <li>• Academic speaking engagements</li>
-                                        <li>• PhD & postdoc supervision inquiries</li>
-                                    </ul>
-                                </CardContent>
-                            </Card>
-                        </div>
-
-                        {/* Contact Form */}
-                        <Card className="border-[#1a2740]/10">
+                        <Card className="border-[#1a2740]/10 h-full">
                             <CardHeader>
-                                <CardTitle className="text-[#1a2740]">Send a Message</CardTitle>
-                                <CardDescription>Fill out the form below and I'll respond within 2-3 business days</CardDescription>
+                                <CardTitle className="text-[#1a2740]">Get in Touch</CardTitle>
                             </CardHeader>
-                            <CardContent>
-                                <form onSubmit={handleSubmit} className="space-y-4">
+                            <CardContent className="space-y-4">
+                                <div className="flex items-start gap-3">
+                                    <Mail className="text-[#0d9488] mt-1" size={20} />
                                     <div>
-                                        <Label htmlFor="name">Name</Label>
-                                        <Input
-                                            id="name"
-                                            value={formData.name}
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            required
-                                            className="mt-1.5"
-                                        />
+                                        <p className="text-[#2c3e50]">fskazi@el.vjti.ac.in</p>
+                                        <p className="text-sm text-[#717182]">Official Email</p>
                                     </div>
+                                </div>
 
+                                <div className="flex items-start gap-3">
+                                    <MapPin className="text-[#0d9488] mt-1" size={20} />
                                     <div>
-                                        <Label htmlFor="email">Email</Label>
-                                        <Input
-                                            id="email"
-                                            type="email"
-                                            value={formData.email}
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            required
-                                            className="mt-1.5"
-                                        />
+                                        <p className="text-[#2c3e50]">University of Mumbai</p>
+                                        <p className="text-[#2c3e50]">Vidyanagari Campus</p>
+                                        <p className="text-[#2c3e50]">Mumbai, Maharashtra 400098</p>
+                                        <p className="text-[#2c3e50]">India</p>
                                     </div>
+                                </div>
+                            </CardContent>
+                        </Card>
 
-                                    <div>
-                                        <Label htmlFor="message">Message</Label>
-                                        <Textarea
-                                            id="message"
-                                            value={formData.message}
-                                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                            required
-                                            rows={5}
-                                            className="mt-1.5"
-                                        />
-                                    </div>
-
-                                    <Button type="submit" className="w-full bg-[#1a2740] hover:bg-[#2c3e50] text-white">
-                                        Send Message
-                                    </Button>
-                                </form>
+                        <Card className="bg-gradient-to-br from-[#1a2740] to-[#2c3e50] text-white border-0 h-full">
+                            <CardContent className="pt-6">
+                                <p className="text-sm mb-4">Available for:</p>
+                                <ul className="space-y-2 text-sm">
+                                    <li>• International research collaborations</li>
+                                    <li>• Policy advisory consultations</li>
+                                    <li>• Government & industry partnerships</li>
+                                    <li>• Academic speaking engagements</li>
+                                    <li>• PhD & postdoc supervision inquiries</li>
+                                </ul>
                             </CardContent>
                         </Card>
                     </div>

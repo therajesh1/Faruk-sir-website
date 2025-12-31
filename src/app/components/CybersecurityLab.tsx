@@ -47,7 +47,7 @@ export default function CybersecurityLab() {
                                 </a>
                             ))}
                             <Button
-                                onClick={() => navigate('/faruk-kazi')}
+                                onClick={() => navigate('/Dr_FSK')}
                                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(8,145,178,0.5)] border border-cyan-400/30"
                             >
                                 Dr. Faruk Kazi
@@ -85,7 +85,7 @@ export default function CybersecurityLab() {
                         ))}
                         <button
                             onClick={() => {
-                                navigate('/faruk-kazi');
+                                navigate('/Dr_FSK');
                                 setIsMenuOpen(false);
                             }}
                             className="w-full text-left block px-3 py-2 rounded-md text-base font-bold bg-cyan-900/50 text-cyan-300 border border-cyan-500/30"
@@ -249,7 +249,7 @@ export default function CybersecurityLab() {
                     <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-400">
                         <div className="flex items-center gap-2">
                             <Mail className="text-cyan-400" size={20} />
-                            <span>contact@cnds-lab.edu (Demo)</span>
+                            <span>coe.cnds@vjti.org.in</span>
                         </div>
                         <div className="h-4 w-px bg-gray-700 hidden md:block"></div>
                         <div>

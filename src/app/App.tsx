@@ -19,7 +19,7 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<CybersecurityLab />} />
-        <Route path="/faruk-kazi" element={<FarukPortfolio />} />
+        <Route path="/Dr_FSK" element={<FarukPortfolio />} />
       </Routes>
     </BrowserRouter>
   );
