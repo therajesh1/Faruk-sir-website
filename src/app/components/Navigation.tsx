@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -20,6 +22,7 @@ export default function Navigation() {
     { label: 'Publications', id: 'publications' },
     { label: 'Industry & Government', id: 'industry' },
     { label: 'Awards', id: 'awards' },
+    { label: 'Photo Gallery', id: 'gallery' },
     { label: 'Contact', id: 'contact' },
   ];
 
@@ -48,6 +51,13 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => navigate('/')}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#1a2740] text-white hover:bg-[#0d9488] transition-colors text-sm font-medium ml-4"
+            >
+              <ArrowLeft size={16} />
+              Back to Lab
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,6 +81,15 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => navigate('/')}
+              className="block w-full text-left px-4 py-3 text-[#2c3e50] hover:bg-gray-50 hover:text-[#0d9488] transition-colors border-t border-gray-100 font-medium"
+            >
+              <div className="flex items-center gap-2">
+                <ArrowLeft size={16} />
+                Back to CNDS Lab
+              </div>
+            </button>
           </div>
         )}
       </div>

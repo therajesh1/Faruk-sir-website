@@ -2,7 +2,8 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import Navigation from './Navigation';
 import ResearchPapers from './ResearchPapers';
-import { Award, BookOpen, Briefcase, Building2, FileText, GraduationCap, Mail, MapPin, Shield, TrendingUp, Users } from 'lucide-react';
+import PhotoGallery from './PhotoGallery';
+import { Award, BookOpen, Briefcase, Building2, FileText, Globe, GraduationCap, Mail, MapPin, Shield, TrendingUp, Users, Server, Activity, Lock, Cpu } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import drFarukKaziImage from '../../assets/287b324ae8353c3ef50b0fdcdd672d78fcd94baf.png';
@@ -365,8 +366,85 @@ export default function FarukPortfolio() {
                     </div>
                 </div>
             </section>
+            {/* National & Cross-Institutional Research Missions */}
+            <section id="missions" className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div className="text-center mb-12">
+                        <h2 className="font-['Playfair_Display'] text-[#1a2740] mb-4" style={{ fontSize: '2.5rem', fontWeight: 600 }}>
+                            National & Cross-Institutional Research Missions
+                        </h2>
+                        <div className="w-20 h-1 bg-[#0d9488] mx-auto"></div>
+                    </div>
 
-            {/* Leadership & Advisory Roles */}
+                    <div className="space-y-6">
+                        <Card className="border-l-4 border-l-[#0d9488] hover:shadow-lg transition-shadow bg-slate-50">
+                            <CardHeader>
+                                <div className="flex justify-between items-start mb-2">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-[#0d9488]/10 rounded-lg">
+                                            <Activity className="text-[#0d9488]" size={24} />
+                                        </div>
+                                        <div>
+                                            <CardTitle className="text-[#1a2740] text-xl">ANRF – Partnerships for Accelerated Innovation & Research (PAIR)</CardTitle>
+                                            <CardDescription className="text-[#2c3e50] font-medium mt-1">
+                                                Role: Co-Principal Investigator | IIT Bombay Hub
+                                            </CardDescription>
+                                        </div>
+                                    </div>
+                                    <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">₹101.69 Cr</span>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex justify-between items-center bg-white/50 p-4 rounded-b-lg mt-2 mx-6 mb-6">
+                                <span className="text-[#2c3e50] font-medium">Duration: Sept 2025 – Aug 2030</span>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="border-l-4 border-l-[#B8860B] hover:shadow-lg transition-shadow bg-slate-50">
+                            <CardHeader>
+                                <div className="flex justify-between items-start mb-2">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-[#B8860B]/10 rounded-lg">
+                                            <Cpu className="text-[#B8860B]" size={24} />
+                                        </div>
+                                        <div>
+                                            <CardTitle className="text-[#1a2740] text-xl">PUSHPAK – National Mission on Drone Technology</CardTitle>
+                                            <CardDescription className="text-[#2c3e50] font-medium mt-1">
+                                                Role: Co-Principal Investigator | MeitY, Government of India
+                                            </CardDescription>
+                                        </div>
+                                    </div>
+                                    <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">₹82.77 Cr</span>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex justify-between items-center bg-white/50 p-4 rounded-b-lg mt-2 mx-6 mb-6">
+                                <span className="text-[#2c3e50] font-medium">Duration: March 2025 – March 2029</span>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="border-l-4 border-l-[#1a2740] hover:shadow-lg transition-shadow bg-slate-50">
+                            <CardHeader>
+                                <div className="flex justify-between items-start mb-2">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-[#1a2740]/10 rounded-lg">
+                                            <Shield className="text-[#1a2740]" size={24} />
+                                        </div>
+                                        <div>
+                                            <CardTitle className="text-[#1a2740] text-xl">Smart Drone Ecosystem & Social Applications</CardTitle>
+                                            <CardDescription className="text-[#2c3e50] font-medium mt-1">
+                                                Role: Co-Principal Investigator | Government of Maharashtra
+                                            </CardDescription>
+                                        </div>
+                                    </div>
+                                    <span className="px-3 py-1 bg-slate-200 text-slate-800 rounded-full text-sm font-medium">₹33.73 Cr</span>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex justify-between items-center bg-white/50 p-4 rounded-b-lg mt-2 mx-6 mb-6">
+                                <span className="text-[#2c3e50] font-medium">Duration: Oct 2022 – Oct 2027</span>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </section>
             <section id="leadership" className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
                     <div className="text-center mb-12">
@@ -426,6 +504,112 @@ export default function FarukPortfolio() {
                             </CardHeader>
                             <CardContent className="text-[#2c3e50]">
                                 <p className="text-sm">Government of Maharashtra electronics policy development</p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="text-center hover:shadow-lg transition-shadow border-[#1a2740]/10">
+                            <CardHeader>
+                                <div className="w-16 h-16 bg-[#0d9488]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <Award className="text-[#0d9488]" size={32} />
+                                </div>
+                                <CardTitle className="text-[#1a2740]">Management Council</CardTitle>
+                                <CardDescription className="text-[#2c3e50]">Member (Hon. Chancellor’s Nominee)</CardDescription>
+                            </CardHeader>
+                            <CardContent className="text-[#2c3e50]">
+                                <p className="text-sm">Dr. Homi Bhabha State University, Mumbai</p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="text-center hover:shadow-lg transition-shadow border-[#1a2740]/10">
+                            <CardHeader>
+                                <div className="w-16 h-16 bg-[#B8860B]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <TrendingUp className="text-[#B8860B]" size={32} />
+                                </div>
+                                <CardTitle className="text-[#1a2740]">NEP Steering Committee</CardTitle>
+                                <CardDescription className="text-[#2c3e50]">Member</CardDescription>
+                            </CardHeader>
+                            <CardContent className="text-[#2c3e50]">
+                                <p className="text-sm">Engineering & Technology Subgroup, Government of Maharashtra</p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="text-center hover:shadow-lg transition-shadow border-[#1a2740]/10">
+                            <CardHeader>
+                                <div className="w-16 h-16 bg-[#0d9488]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <GraduationCap className="text-[#0d9488]" size={32} />
+                                </div>
+                                <CardTitle className="text-[#1a2740]">UDRF</CardTitle>
+                                <CardDescription className="text-[#2c3e50]">External Expert Committee</CardDescription>
+                            </CardHeader>
+                            <CardContent className="text-[#2c3e50]">
+                                <p className="text-sm">University Department Ranking Framework, University of Mumbai</p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="text-center hover:shadow-lg transition-shadow border-[#1a2740]/10">
+                            <CardHeader>
+                                <div className="w-16 h-16 bg-[#B8860B]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <FileText className="text-[#B8860B]" size={32} />
+                                </div>
+                                <CardTitle className="text-[#1a2740]">Scheme Analysis Committee</CardTitle>
+                                <CardDescription className="text-[#2c3e50]">Member Secretary</CardDescription>
+                            </CardHeader>
+                            <CardContent className="text-[#2c3e50]">
+                                <p className="text-sm">Committee for Central Government Scheme Analysis, Govt. of Maharashtra</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+
+            {/* Public Safety, Government Advisory & Societal Impact */}
+            <section id="public-safety" className="py-20 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div className="text-center mb-12">
+                        <h2 className="font-['Playfair_Display'] text-[#1a2740] mb-4" style={{ fontSize: '2.5rem', fontWeight: 600 }}>
+                            Public Safety, Government Advisory & Societal Impact
+                        </h2>
+                        <div className="w-20 h-1 bg-[#0d9488] mx-auto"></div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <Card className="bg-white hover:shadow-xl transition-all duration-300 border-t-4 border-t-[#0d9488]">
+                            <CardContent className="pt-6">
+                                <Shield className="text-[#0d9488] w-10 h-10 mb-4" />
+                                <h3 className="text-lg font-bold text-[#1a2740] mb-2">Police Commendation</h3>
+                                <p className="text-[#2c3e50] text-sm">
+                                    Received official commendation from Maharashtra Police for technology-driven analysis supporting critical investigations.
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-white hover:shadow-xl transition-all duration-300 border-t-4 border-t-[#B8860B]">
+                            <CardContent className="pt-6">
+                                <Lock className="text-[#B8860B] w-10 h-10 mb-4" />
+                                <h3 className="text-lg font-bold text-[#1a2740] mb-2">Technical Expert</h3>
+                                <p className="text-[#2c3e50] text-sm">
+                                    Served as Technical Expert for cybersecurity project evaluations and infrastructure auditing.
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-white hover:shadow-xl transition-all duration-300 border-t-4 border-t-[#1a2740]">
+                            <CardContent className="pt-6">
+                                <Activity className="text-[#1a2740] w-10 h-10 mb-4" />
+                                <h3 className="text-lg font-bold text-[#1a2740] mb-2">"Dial 1930" Initiative</h3>
+                                <p className="text-[#2c3e50] text-sm">
+                                    Technical Expert for India's national cybercrime response initiative, enhancing emergency response capabilities.
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-white hover:shadow-xl transition-all duration-300 border-t-4 border-t-[#0d9488]">
+                            <CardContent className="pt-6">
+                                <Users className="text-[#0d9488] w-10 h-10 mb-4" />
+                                <h3 className="text-lg font-bold text-[#1a2740] mb-2">Public Safety Analytics</h3>
+                                <p className="text-[#2c3e50] text-sm">
+                                    Developed data-driven crime analysis and heatmap-based insights to support investigations into crimes against children.
+                                </p>
                             </CardContent>
                         </Card>
                     </div>
@@ -542,8 +726,80 @@ export default function FarukPortfolio() {
                 </div>
             </section>
 
+
+            {/* Global Recognition in Securing Industrial Automation Systems */}
+            <section id="global-recognition" className="py-20 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div className="text-center mb-12">
+                        <h2 className="font-['Playfair_Display'] text-[#1a2740] mb-4" style={{ fontSize: '2.5rem', fontWeight: 600 }}>
+                            Global Recognition in Securing Industrial Systems
+                        </h2>
+                        <div className="w-20 h-1 bg-[#0d9488] mx-auto mb-6"></div>
+                        <p className="text-[#2c3e50] max-w-3xl mx-auto" style={{ fontSize: '1.0625rem' }}>
+                            Discovered and responsibly disclosed ~25 global cybersecurity vulnerabilities (CVEs) impacting industrial and critical infrastructure systems.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6">
+                            <Card className="border-l-8 border-l-[#B8860B] bg-white shadow-lg">
+                                <CardContent className="p-6">
+                                    <div className="flex items-start gap-4">
+                                        <Shield className="text-[#B8860B] w-12 h-12 flex-shrink-0" />
+                                        <div>
+                                            <h3 className="text-xl font-bold text-[#1a2740] mb-2">Critical Infrastructure Impact</h3>
+                                            <p className="text-[#2c3e50] mb-4">
+                                                Identified vulnerabilities in widely deployed industrial controllers and networking devices used in power grids, manufacturing, and process automation.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2">
+                                                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-bold">CVE-202X-XXXX</span>
+                                                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-bold">ICS-CERT</span>
+                                                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-bold">VDE-CERT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+
+                        <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                            <h3 className="text-[#1a2740] font-bold text-lg mb-6 flex items-center gap-2">
+                                <Activity className="text-[#0d9488]" />
+                                Affected Systems & Manufacturers
+                            </h3>
+                            <div className="grid grid-cols-1 gap-4">
+                                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md border-l-4 border-l-[#1a2740]">
+                                    <Server size={20} className="text-[#1a2740]" />
+                                    <span className="text-[#2c3e50] font-medium">SEL Relays (SEL-411L)</span>
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md border-l-4 border-l-[#1a2740]">
+                                    <Server size={20} className="text-[#1a2740]" />
+                                    <span className="text-[#2c3e50] font-medium">Rockwell Automation PLCs</span>
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md border-l-4 border-l-[#1a2740]">
+                                    <Server size={20} className="text-[#1a2740]" />
+                                    <span className="text-[#2c3e50] font-medium">Mitsubishi Electric HMI & Controllers</span>
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md border-l-4 border-l-[#1a2740]">
+                                    <Server size={20} className="text-[#1a2740]" />
+                                    <span className="text-[#2c3e50] font-medium">Schneider Electric RTUs & ABB AC500 PLCs</span>
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md border-l-4 border-l-[#1a2740]">
+                                    <Server size={20} className="text-[#1a2740]" />
+                                    <span className="text-[#2c3e50] font-medium">GE MiCOM Protection Systems</span>
+                                </div>
+                                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-md border-l-4 border-l-[#1a2740]">
+                                    <Globe size={20} className="text-[#1a2740]" />
+                                    <span className="text-[#2c3e50] font-medium">TP-Link, D-Link, Skyworth Networking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Awards & Recognition */}
-            <section id="awards" className="py-20 bg-gray-50">
+            <section id="awards" className="py-20 bg-white">
                 <div className="max-w-5xl mx-auto px-6 lg:px-12">
                     <div className="text-center mb-12">
                         <h2 className="font-['Playfair_Display'] text-[#1a2740] mb-4" style={{ fontSize: '2.5rem', fontWeight: 600 }}>
@@ -604,6 +860,76 @@ export default function FarukPortfolio() {
                 </div>
             </section>
 
+            {/* Applied Expertise & Professional Certifications */}
+            <section id="expertise" className="py-20 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div className="text-center mb-12">
+                        <h2 className="font-['Playfair_Display'] text-[#1a2740] mb-4" style={{ fontSize: '2.5rem', fontWeight: 600 }}>
+                            Applied Expertise & Professional Certifications
+                        </h2>
+                        <div className="w-20 h-1 bg-[#0d9488] mx-auto"></div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12">
+                        {/* Expertise */}
+                        <Card className="border-0 shadow-lg bg-gradient-to-br from-[#1a2740] to-[#2c3e50] text-white">
+                            <CardHeader>
+                                <div className="flex items-center gap-4 mb-2">
+                                    <div className="p-3 bg-white/10 rounded-full">
+                                        <Briefcase size={32} className="text-[#0d9488]" />
+                                    </div>
+                                    <CardTitle className="text-2xl">Core Expertise</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="grid gap-4">
+                                    {['Cybersecurity Frameworks (C2M2, NIST)', 'ICS / OT Security', 'Digital Twin Technologies', 'Smart Grid Architecture', 'Ethical Hacking for Critical Infrastructure'].map((item, i) => (
+                                        <div key={i} className="flex items-center gap-3">
+                                            <div className="w-2 h-2 rounded-full bg-[#0d9488]"></div>
+                                            <span className="text-lg">{item}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Certifications */}
+                        <Card className="border-0 shadow-lg bg-white">
+                            <CardHeader>
+                                <div className="flex items-center gap-4 mb-2">
+                                    <div className="p-3 bg-[#0d9488]/10 rounded-full">
+                                        <Award size={32} className="text-[#0d9488]" />
+                                    </div>
+                                    <CardTitle className="text-2xl text-[#1a2740]">Professional Certifications</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="space-y-6">
+                                    <div className="flex items-start gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
+                                        <Shield className="text-[#B8860B] mt-1" size={24} />
+                                        <div>
+                                            <h4 className="font-bold text-[#1a2740] text-lg">Certified Ethical Hacker (CEH)</h4>
+                                            <p className="text-[#2c3e50]">EC-Council</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
+                                        <Lock className="text-[#B8860B] mt-1" size={24} />
+                                        <div>
+                                            <h4 className="font-bold text-[#1a2740] text-lg">IEC 62443 Cyber Security Specialist</h4>
+                                            <p className="text-[#2c3e50]">Foundation & Risk Assessment</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+
+            {/* Photo Gallery */}
+            <PhotoGallery />
+
             {/* Contact Section */}
             <section id="contact" className="py-20 bg-white">
                 <div className="max-w-5xl mx-auto px-6 lg:px-12">
@@ -635,9 +961,8 @@ export default function FarukPortfolio() {
                                 <div className="flex items-start gap-3">
                                     <MapPin className="text-[#0d9488] mt-1" size={20} />
                                     <div>
-                                        <p className="text-[#2c3e50]">University of Mumbai</p>
-                                        <p className="text-[#2c3e50]">Vidyanagari Campus</p>
-                                        <p className="text-[#2c3e50]">Mumbai, Maharashtra 400098</p>
+                                        <p className="text-[#2c3e50]">Veermata Jijabai Technological Institute (VJTI)</p>
+                                        <p className="text-[#2c3e50]">Matunga, Mumbai, Maharashtra 400019</p>
                                         <p className="text-[#2c3e50]">India</p>
                                     </div>
                                 </div>
@@ -700,6 +1025,6 @@ export default function FarukPortfolio() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </div >
     );
 }
